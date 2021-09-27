@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Diff Sample" icon-name="custom:custom66">
+        <div>
+            <div class="slds-var-p-around_x-small">
+                <c-lookup onsearch={handleSearch} onselectionchange={handleSingleSelectionChange} label="Select 2 PDF Files"
+                    placeholder="Search files..." errors={errors} is-multi-entry>
+                </c-lookup>
+            </div>
+            <div>
+                <lightning-button class="slds-var-p-around_x-small slds-align_absolute-center" variant="brand"
+                    label="Compare" onclick={handleCompare}></lightning-button>
+            </div>
+        </div>
+        <div class="slds-var-p-around_x-small">
+            <c-pdftron-wv-instance></c-pdftron-wv-instance>
+        </div>
+    </lightning-card>
+</template>
