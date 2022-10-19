@@ -7,7 +7,7 @@ var resourceURL = '/resource/'
 var myfilesUrl = custom.myfilesUrl + '/'
 window.Core.forceBackendType('ems')
 
-resourceURL = resourceURL + custom.namespacePrefix
+resourceURL = resourceURL + custom.namespacePrefix + 'V890_'
 
 /**
  * The following `window.Core.set*` functions point WebViewer to the
