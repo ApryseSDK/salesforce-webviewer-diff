@@ -7,7 +7,7 @@ var resourceURL = '/resource/'
 var myfilesUrl = custom.myfilesUrl + '/'
 window.Core.forceBackendType('ems')
 
-resourceURL = resourceURL + custom.namespacePrefix + 'V890_'
+resourceURL = resourceURL + custom.namespacePrefix + 'V104'
 
 /**
  * The following `window.Core.set*` functions point WebViewer to the
@@ -74,13 +74,13 @@ async function receiveMessage (event) {
         await newDoc.unlock()
 
         //load new document
-        instance.loadDocument(newDoc, {
+        instance.UI.loadDocument(newDoc, {
           extension: 'pdf'
         })
 
         break
       case 'CLOSE_DOCUMENT':
-        instance.closeDocument()
+        instance.UI.closeDocument()
         break
       default:
         break
