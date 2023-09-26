@@ -1,7 +1,7 @@
 import { LightningElement, wire, track, api } from 'lwc'
 import { CurrentPageReference } from 'lightning/navigation'
 import { loadScript } from 'lightning/platformResourceLoader'
-import libUrl from '@salesforce/resourceUrl/V890_lib'
+import libUrl from '@salesforce/resourceUrl/V104lib'
 import myfilesUrl from '@salesforce/resourceUrl/myfiles'
 import { ShowToastEvent } from 'lightning/platformShowToastEvent'
 import { registerListener, unregisterAllListeners } from 'c/pubsub'
@@ -64,8 +64,8 @@ export default class PdftronWvInstance extends LightningElement {
         backendType: 'ems',
         config: myfilesUrl + this.config, //path to config file stored in /staticresources/
         fullAPI: this.fullAPI,
-        enableOptimizedWorkers: false
-        // l: 'YOUR_LICENSE_KEY_HERE',
+        enableOptimizedWorkers: false,
+        //l: 'YOUR_LICENSE_KEY_HERE',
       },
       viewerElement
     )
